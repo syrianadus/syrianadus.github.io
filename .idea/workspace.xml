@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fa37ebb-28e7-49c1-a29a-ef3eb21e4312" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistics.html" afterPath="$PROJECT_DIR$/statistics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/forecast.html" afterPath="$PROJECT_DIR$/forecast.html" />
     </list>
     <ignored path="syrianadus.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forecast.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forecast.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/forecast.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1296296" vertical-offset="177" max-vertical-offset="1190">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41149068" vertical-offset="432" max-vertical-offset="1224">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -74,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="statistics.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="statistics.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/statistics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7766423" vertical-offset="233" max-vertical-offset="1173">
+            <state vertical-scroll-proportion="-20.461538" vertical-offset="233" max-vertical-offset="1173">
               <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -119,12 +119,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/forecast.html" />
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/countries.html" />
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/statistics.html" />
+        <option value="$PROJECT_DIR$/forecast.html" />
       </list>
     </option>
   </component>
@@ -313,16 +313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forecast.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1296296" vertical-offset="177" max-vertical-offset="1190">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5" vertical-offset="323" max-vertical-offset="1173">
@@ -355,7 +345,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/statistics.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7766423" vertical-offset="233" max-vertical-offset="1173">
+        <state vertical-scroll-proportion="-20.461538" vertical-offset="233" max-vertical-offset="1173">
           <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -363,6 +353,16 @@
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forecast.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41149068" vertical-offset="432" max-vertical-offset="1224">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
