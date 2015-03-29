@@ -102,6 +102,7 @@ myapp.controller("statsController", function($scope) {
             highlight: '#FFC870',
             label: 'Yellow'
         }];
+
 })
 
 
