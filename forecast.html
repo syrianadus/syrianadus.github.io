@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+
+<head>
+
+    <title>Angular app</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="weatherController" class="stripeMe">
+
+<div class="navbar navbar-default">
+
+    <ul class="nav navbar-nav">
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="countries.html">Countries</a></li>
+
+        <li><a href="forecast.html">Forecast</a></li>
+
+        <li><a href="#">Staff</a></li>
+
+        <li><a href="#">Contact Us</a></li>
+
+    </ul>
+
+</div>
+
+<div ng-init="forecast = false">
+    <div class="jumbotron" style="background:#00007A;color:white;">
+        <h2 style="text-align: center;">{{forecast.city.name+", " }} {{ forecast.city.country}}</h2>
+    </div>
+    <div class="weather_main">
+        <div ng-show="forecast" ng-cloak ng-repeat="day in forecast.list" class="animate bounceIn panel panel-info col-md-2 weather_container">
+            <div class="small_container	">
+                <img ng-src="./images/openWeatherIcons/{{day.weather[0].icon}}.png">
+                <h5 custom-popover popover-html="Some Popover Text" popover-placement="bottom" popover-label="{{day.temp.max | temp}}"></h5>
+                <h5 data-toggle="tooltip" data-placement="right" title="Minimum Temp">{{day.temp.min | temp}}</h5>
+                <h4>{{day.weather[0].description}}</h4>
+                <h4>{{weather | date}}</h4>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+<script src="app.js"></script>
+<script src="xml2js.js"></script>
+
+
+</body>
+
+</html>

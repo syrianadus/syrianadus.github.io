@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+
+    <head>
+
+        <title>Angular app</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body ng-controller="appCont" class="stripeMe">
+
+        <div class="navbar navbar-default">
+
+            <ul class="nav navbar-nav">
+
+                <li><a href="home.html">Home</a></li>
+
+                <li><a href="countries.html">Countries</a></li>
+
+                <li><a href="forecast.html">Forecast</a></li>
+
+                <li><a href="#">Staff</a></li>
+
+                <li><a href="#">Contact Us</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="col-md-6 fade">
+
+            <table class="table table-striped table-condensed table-bordered">
+
+                <tr>
+
+                    <th class="col-md-2">Name</th>
+
+                    <th class="col-md-2">Population</th>
+
+                    <th class="col-md-2">Capital</th>
+
+                </tr>
+
+                <tr ng-repeat="country in counts | orderBy : name" ng-cloak>
+
+                    <td><a ng-href="#" ng-click="run(country.name)">{{country.name}}</a></td>
+
+                    <td>{{country.capital}}</td>
+
+                    <td>{{country.population}}</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="col-md-6" ng-show="Selectedcountry!=null">
+
+           
+
+            <div class="Aligner" ng-cloak>
+<div class="vertisize" ng-cloak style="background:LightGrey;border-radius: 50%;width: 200px;height: 200px "><h1 class="center-block">{{Selectedcountry.name}}</h1></div>
+
+                <h4>Capital : {{Selectedcountry.capital}}</h4>
+
+                <h4>Population : {{Selectedcountry.population}}</h4>
+
+                <h4>Currency : {{Selectedcountry.currencies[0]}}</h4>
+
+                <h4>Area : {{Selectedcountry.area}}</h4>
+
+                <h4>Native Name : {{Selectedcountry.nativeName}}</h4>
+
+                <div>
+
+                <h4>Languages: <span ng-repeat="language in Selectedcountry.languages" class="label label-info">{{language}}</span></h4> 
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular.js"></script>
+
+        <script src="app.js"></script>
+
+    </body>
+
+</html>

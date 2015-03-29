@@ -1,0 +1,56 @@
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+.badgybadge{
+    background-color: blue;
+    border-radius: 5px;
+    padding : 3px;
+    color:white;
+    font-weight: bold
+}
+
+.fade
+{
+        opacity:0.5;
+}
+.fade:hover
+{
+        opacity:1;
+}
+.threed:hover
+{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+
+.vertisize{
+    display: flex;
+    align-items: center;
+}
+
+.Aligner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.stripeMe{
+    background: url(http://alumni.iit.edu/image/2014_framework/background.png) repeat 0 0;
+}
+.weather_main{
+    display: flex;
+    justify-content: space-around;
+}
+.weather_container{
+    float:left;
+    color:white;
+    background:gray;
+
+}
+.small_container{
+    text-align: center
+}
