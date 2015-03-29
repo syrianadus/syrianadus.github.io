@@ -13,7 +13,7 @@
 
     </head>
 
-    <body ng-controller="appCont" class="stripeMe">
+    <body ng-controller="countryCont" class="stripeMe">
 
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
@@ -26,15 +26,11 @@
             <span class="navbar-brand" href="#">Syrianadus</span>
         </div>
         <ul class="nav navbar-nav navbar-collapse collapse">
-
             <li><a href="index.html">Home</a></li>
-
             <li><a href="countries.html">Countries</a></li>
-
             <li><a href="forecast.html">Forecast</a></li>
-
+            <li><a href="statistics.html">Stats</a></li>
             <li><a href="#">Staff</a></li>
-
             <li><a href="#">Contact Us</a></li>
 
         </ul>
@@ -68,7 +64,7 @@
 
         </div>
 
-        <div class="col-md-6" ng-show="Selectedcountry!=null">
+        <div class="col-md-6 animated fadeIn" ng-show="Selectedcountry!=null">
 
 
             <div class="vertisize jumbotron" ng-cloak ><h1 class="center-block">{{Selectedcountry.name}}</h1></div>
@@ -98,6 +94,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="Chart.min.js"></script>
+    <script src="tc-angular-chartjs.js"></script>
     <script src="app.js"></script>
 
     </body>

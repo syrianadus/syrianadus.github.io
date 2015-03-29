@@ -1,17 +1,9 @@
-angular
-    .module('myApp', [])
-    .filter('temp', filterTemp)
-    .factory("countries", countries)
-    .factory("weather", weather)
-    .factory("IPGeolocation",IPGeolocation)
-    .controller("appCont", appCont)
-    .controller("weatherController", weatherController);
+var myapp=angular.module('myApp', ['tc.chartjs']);
+
 
 //Defining Countries Factory 
-countries.$inject=['$http'];
-weather.$inject=['$http'];
-IPGeolocation.$inject=['$http'];
-function IPGeolocation($http){
+
+myapp.factory("IPGeolocation",function($http){
     var service = {
         getInfo:getInfo
     }
@@ -19,25 +11,27 @@ function IPGeolocation($http){
     function getInfo() {
         return $http.get("http://ip-api.com/json")
     }
-}
-function countries($http) {
-    
+})
+
+
+myapp.factory("countries", function($http) {
+
     var service = {
         getCountries:getCountries,
         getCountry:getCountry
     }
     return service;
-    
+
     function getCountries() {
         return $http.get("http://restcountries.eu/rest/v1/all");
     }
-    
+
     function getCountry(country) {
         return $http.get("http://restcountries.eu/rest/v1/name/"+ country);
     }
-    
-}
-function weather($http) {
+
+})
+myapp.factory("weather", function weather($http) {
 
     var service = {
         getWeather:getWeather
@@ -47,10 +41,12 @@ function weather($http) {
     function getWeather(params) {
         return $http.get('http://api.openweathermap.org/data/2.5/forecast/daily?q='+params.city+','+params.countryCode+'&mode=json&units=metric&cnt=5');
     }
-}
+})
+
+
 
 //Defining Controller
-function appCont($scope, countries) {
+myapp.controller("countryCont", function($scope, countries) {
     $scope.Selectedcountry=null;
     $scope.do=function(){
         countries.getCountries()
@@ -67,10 +63,12 @@ function appCont($scope, countries) {
                 console.log($scope.Selectedcountry);
             })
     };
-    
-}
+})
+
+
 //Defining Forecast Controller
-function weatherController($scope, weather, IPGeolocation) {
+
+myapp.controller("weatherController", function($scope, weather, IPGeolocation) {
     $scope.weather = new Date();
     $scope.forecast = false;
     IPGeolocation.getInfo()
@@ -83,9 +81,33 @@ function weatherController($scope, weather, IPGeolocation) {
         });
 
 
-}
+})
+myapp.controller("statsController", function($scope) {
+    $scope.data = [
+        {
+            value: 300,
+            color:'#F7464A',
+            highlight: '#FF5A5E',
+            label: 'Red'
+        },
+        {
+            value: 50,
+            color: '#46BFBD',
+            highlight: '#5AD3D1',
+            label: 'Green'
+        },
+        {
+            value: 100,
+            color: '#FDB45C',
+            highlight: '#FFC870',
+            label: 'Yellow'
+        }];
+})
+
+
+
 //Defining The Filter
-function filterTemp($filter) {
+myapp.filter('temp', function($filter) {
     return function(input, precision) {
         if (!precision) {
             precision = 1;
@@ -93,4 +115,5 @@ function filterTemp($filter) {
         var numberFilter = $filter('number');
         return numberFilter(input, precision) + '\u00B0C';
     };
-};
+})
+
