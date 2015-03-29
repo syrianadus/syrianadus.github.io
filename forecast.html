@@ -7,7 +7,7 @@
     <title>Angular app</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.2.6/animate.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -32,11 +32,11 @@
 
 </div>
 
-<div ng-init="forecast = false">
+<div ng-init="forecast = false" >
     <div class="jumbotron" style="background:#00007A;color:white;" ng-cloak>
         <h2 style="text-align: center;">{{forecast.city.name+", " }} {{ forecast.city.country}}</h2>
     </div>
-    <div class="weather_main">
+    <div class="weather_main animated bounceInUp">
         <div ng-show="forecast" ng-cloak ng-repeat="day in forecast.list" class="panel panel-info col-md-2 weather_container row">
             <div class="small_container	animated fadeIn">
                 <img ng-src="./images/openWeatherIcons/{{day.weather[0].icon}}.png">
