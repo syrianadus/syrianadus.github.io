@@ -37,7 +37,7 @@
         <h2 style="text-align: center;">{{forecast.city.name+", " }} {{ forecast.city.country}}</h2>
     </div>
     <div class="weather_main animated bounceInUp">
-        <div ng-show="forecast" ng-cloak ng-repeat="day in forecast.list" class="panel panel-info col-md-2 weather_container row">
+        <div ng-show="forecast" ng-cloak ng-repeat="day in forecast.list" class="panel panel-info col-md-2 col-sm-2 weather_container row">
             <div class="small_container	animated fadeIn">
                 <img ng-src="./images/openWeatherIcons/{{day.weather[0].icon}}.png">
                 <h5 custom-popover popover-html="Some Popover Text" popover-placement="bottom" popover-label="{{day.temp.max | temp}}"></h5>
