@@ -599,7 +599,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+    width: 100%;
   height: auto;
 }
 
@@ -11257,10 +11257,17 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
+  background-color: #202740;
+/*  background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;*/
+}
+
+section#referral {
+  background-color: #202740;
+/*  background-image: url("../assets/img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;*/
 }
 section#contact .section-heading {
   color: #fff;
